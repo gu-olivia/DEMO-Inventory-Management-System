@@ -7,19 +7,16 @@ from urllib.parse import quote_plus
 Base = declarative_base()
 
 connection_string = (
-    "DRIVER={ODBC Driver 18 for SQL Server};"
-    "SERVER=localhost;"
-    "DATABASE=Inventory_Management_System;"
     "Trusted_Connection=yes;"
     "TrustServerCertificate=yes;"
 )
 
-DATABASE_URL = (
-    "mssql+pyodbc:///?odbc_connect=" +
-    quote_plus(connection_string)
-)
+DATABASE_URL = "sqlite:///./inventory.db"
 
-engine = create_engine(DATABASE_URL)
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={"check_same_thread": False}
+)
 SessionLocal = sessionmaker(bind=engine)
 with engine.connect() as conn:
     conn.execute(text("SELECT 1"))
