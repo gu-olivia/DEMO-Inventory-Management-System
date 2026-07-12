@@ -1,0 +1,94 @@
+<body>
+  <h1>Packaged Inventory</h1>
+  <a href="/">
+    <button>Back to Home</button>
+  </a>
+  <p></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Catalog</th>
+        <th>Unit Price</th>
+        <th>Product Name</th>
+        <th>Clone</th>
+        <th>Size</th>
+        <th>Lot</th>
+        <th>Package Date</th>
+        <th>Packaged Conc.</th>
+        <th>Location</th>
+        <th>Qty Remaining</th>
+        <th>Buffer</th>
+        <th>Cost of Goods</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+    <tbody id="packagedTable"></tbody>
+  </table>
+
+  <div id="packaged_inventory"></div>
+
+    <h2 id="formTitle">Add New Packaged Product</h2>
+  <p></p>
+  <form id="packagedForm">
+    <div>
+      <label>Product Name</label>
+      <select id="product_id"></select>
+    </div>
+        <div>
+      <label>Catalog</label>
+      <input id="product_catalog_number" />
+    </div>
+    <div>
+      <label>Unit Price</label>
+      <input id="unit_price" /></select>
+    </div>
+    <div>
+      <label>Lot Name</label>
+      <select id="lot_id"></select>
+    </div>
+    <div>
+      <div>
+        <label>Lot Number</label>
+        <input id="lot_number" type="text" />
+      </div>
+            <div>
+        <label>Size</label>
+        <input id="size" type="text" />
+      </div>
+          <div>
+      <label>Packaging Date</label>
+      <input id="packaging_date" type="date" />
+    </div>
+    <div>
+      <label>Packaging Conc.</label>
+      <input id="packaging_concentration_ug_mL" type="text" />
+    </div>
+    <div>
+      <label>Location</label>
+      <input id="location" type="text" />
+    </div>
+        <div>
+      <label>Qty Remaining</label>
+      <input id="qty_remaining" type="number" />
+    </div>
+         <div>
+      <label>Buffer</label>
+      <input id="buffer" type="text" />
+    </div>
+         <div>
+      <label>Cost of Goods</label>
+      <input id="cost_of_goods" type="text" />
+    </div>
+    <div>
+      <label>Remarks</label>
+      <input id="remarks" type="text" />
+    </div>
+    <div>
+      <button type="submit">Add Packaged Product</button>
+      <button type="button" onclick="cancelEdit('lot')">Cancel Edit</button>
+    </div>
+  </form>
+
+  <script src="/static/app.js"></script>
+  <link rel="stylesheet" href="/static/style.css" />
+</body>

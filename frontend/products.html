@@ -1,0 +1,87 @@
+<body>
+  <h1>Products</h1>
+  <a href="/">
+    <button>Back to Home</button>
+  </a>
+  <p></p>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Product Name</th>
+        <th>Ab</th>
+        <th>Fluorophore ID</th>
+        <th>Fluorophore Name</th>
+        <th>Host Isotype</th>
+        <th>Part Number</th>
+        <th>Clone</th>
+        <th>Product Category</th>
+        <th>Top Product</th>
+      </tr>
+    </thead>
+    <tbody id="productsTable"></tbody>
+  </table>
+
+  <div id="products"></div>
+
+  <h2 id="formTitle">Add New Product</h2>
+  <p></p>
+  <form id="productForm">
+    <div>
+      <label>Product Name</label>
+      <input id="product_name" type="text" />
+    </div>
+    <div>
+      <label>Ab</label>
+      <input id="ab_name" type="text" />
+    </div>
+    <div>
+      <label>Fluorophore</label>
+      <select id="fluorophore_name" />
+              <option value="">N/A</option></select>
+    </div>
+        <div>
+      <label>Host Isotype</label>
+      <select id="host_isotype_name">
+          <option value="">N/A</option>
+          <option>IgA, k</option>
+          <option>IgD, k</option>
+          <option>IgG1, k</option>
+          <option>IgG2a, k</option>
+          <option>IgG2b, k</option>
+          <option>IgG2c, k</option>
+          <option>IgG3, k</option>
+          <option>IgM, k</option>
+          <option>Polyclonal</option></select>
+    </div>
+    <div>
+      <label>Part Number</label>
+      <input id="part_number" type="text" />
+    </div>
+    <div>
+      <label>Clone Name</label>
+      <input id="clone_name" type="text" />
+    </div>
+        <div>
+      <label>Product Category</label>
+      <select id="product_category">
+          <option>conjugated_ab</option>
+          <option>purified_ab</option>
+          <option>reagent</option></select>
+    </div>
+            <div>
+      <label>Top Product</label>
+      <select id="top_products">
+          <option>NO</option>
+                  <option>YES</option></select>
+    </div>
+    <div>
+      <button type="submit">Add Product</button>
+      <button type="button" onclick="cancelEdit('product')">
+        Cancel Edit
+    </button>
+    </div>
+  </form>
+  <script src="/static/app.js" defer></script>
+  <link rel="stylesheet" href="/static/style.css" />
+</body>

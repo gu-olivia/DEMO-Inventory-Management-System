@@ -1,0 +1,76 @@
+<body>
+  <h1>Bulk Inventory</h1>
+  <a href="/">
+    <button>Back to Home</button>
+  </a>
+  <p></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Ab</th>
+        <th>Fluorophore Name</th>
+        <th>Host Isotype</th>
+        <th>Part Number</th>
+        <th>Clone</th>
+        <th>Lot Number</th>
+        <th>Creation Date</th>
+        <th>Expiration Date</th>
+        <th>Inital Volume</th>
+        <th>Current Volume</th>
+        <th>Storage Conc.</th>
+        <th>Location</th>
+        <th>Buffer</th>
+        <th>Remarks</th>
+        <th>Top Product</th>
+      </tr>
+    </thead>
+    <tbody id="bulkTable"></tbody>
+  </table>
+
+  <div id="bulk_inventory"></div>
+  <h2 id="formTitle">Add New Bulk Product</h2>
+  <p></p>
+  <form id="bulkForm">
+        <div>
+      <label>Product Name</label>
+      <select id="product_id"></select>
+    </div>
+    <div>
+      <label>Lot Name</label>
+      <select id="lot_id"></select>
+    </div>
+    <div>
+      <div>
+        <label>Lot Number</label>
+        <input id="lot_number" type="text" />
+      </div>
+      <div>
+      <label>Buffer</label>
+      <input id="buffer" type="text" />
+    </div>
+          <div>
+      <label>Storage Conc.</label>
+      <input id="storage_concentration_ug_mL" type="text" />
+    </div>
+    <div>
+      <label>Current Volume</label>
+      <input id="current_volume_mL" type="text" />
+    </div>
+        <div>
+      <label>Location</label>
+      <input id="location" type="text" />
+    </div>
+    <div>
+      <label>Remarks</label>
+      <input id="remarks" type="text" />
+    </div>
+    <div>
+      <button type="submit">Add Lot</button>
+      <button type="button" onclick="cancelEdit('lot')">Cancel Edit</button>
+    </div>
+  </form>
+
+  <script src="/static/app.js"></script>
+  <link rel="stylesheet" href="/static/style.css" />
+</body>
