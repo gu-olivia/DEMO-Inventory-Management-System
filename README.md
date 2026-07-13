@@ -28,7 +28,7 @@ This project demonstrates a CRUD-based inventory application that tracks bioconj
 - Pydantic
 
 ### Database
-- SQLite 
+- PostgreSQL (hosted on Supabase)
 
 ## Running Locally
 ### Clone the repository
