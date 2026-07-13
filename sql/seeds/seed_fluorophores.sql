@@ -1,1 +1,33 @@
-
+INSERT INTO fluorophores (
+    fluorophore_id,
+    fluorophore_name,
+    fluorophore_group,
+    display_name
+)
+VALUES
+    (1,  'FITC',                 NULL, 'FITC'),
+    (2,  'PE',                   NULL, 'PE'),
+    (3,  'PerCP',                NULL, 'PerCP'),
+    (4,  'APC',                  NULL, 'APC'),
+    (5,  'Biotin',               NULL, 'Biotin'),
+    (6,  'PerCP-Cyanine5_5',     NULL, 'PerCP-Cyanine5.5'),
+    (7,  'PE-Cyanine5',          NULL, 'PE-Cyanine5'),
+    (8,  'PE-Cyanine7',          NULL, 'PE-Cyanine7'),
+    (9,  'APC-Cyanine7',         NULL, 'APC-Cyanine7'),
+    (10, 'APC-iFluor750',        NULL, 'APC-iFluor750'),
+    (11, 'iFluor488',            NULL, 'iFluor488'),
+    (12, 'iFluor647',            NULL, 'iFluor647'),
+    (13, 'PE-iFluor594',         NULL, 'PE-iFluor594'),
+    (14, 'mFluor450',            1,    'mFluor450'),
+    (15, 'mFluor500',            NULL, 'mFluor500'),
+    (16, 'mFluor540',            NULL, 'mFluor540'),
+    (17, 'APC-iFluor700',        NULL, 'APC-iFluor700'),
+    (18, 'PE-iFluor594',         NULL, 'PE-iFluor594'),
+    (19, 'iFluor700',            NULL, 'iFluor700'),
+    (20, 'PE-CF594',             NULL, 'PE-CF594'),
+    (21, 'mFluor510',            NULL, 'mFluor510'),
+    (22, 'iFluor750',            NULL, 'iFluor750'),
+    (23, 'PE-iFluor647',         NULL, 'PE-iFluor647'),
+    (24, 'PE-Cyanine5_5',        NULL, 'PE-Cyanine5.5'),
+    (25, 'CF405S',               1,    'CF405S'),
+    (26, 'CF405M',               1,    'CF405M');
