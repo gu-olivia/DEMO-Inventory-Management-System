@@ -11,7 +11,7 @@ connection_string = (
     "TrustServerCertificate=yes;"
 )
 
-DATABASE_URL = "sqlite:///./inventory.db"
+DATABASE_URL = f"postgresql+psycopg://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?sslmode=require"
 
 engine = create_engine(
     DATABASE_URL,
