@@ -69,5 +69,3 @@ Open `frontend/index.html` in your browser.
 ## License
 
 This project is intended for educational and portfolio purposes.
-
-## Test
