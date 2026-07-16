@@ -9,10 +9,19 @@ from .database import get_db
 from .database import SessionLocal
 from . import models, schemas
 from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 
-templates = Jinja2Templates(directory="templates")
+BASE_DIR = Path(__file__).resolve().parent
+
+templates = Jinja2Templates(directory=BASE_DIR / "templates")
 
 app = FastAPI()
+
+app.mount(
+    "/static",
+    StaticFiles(directory=BASE_DIR / "static"),
+    name="static"
+)
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
