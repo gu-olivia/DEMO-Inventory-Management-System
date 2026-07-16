@@ -33,12 +33,6 @@ def home(request: Request):
         name="index.html"
     )
 
-app.mount(
-    "/static",
-    StaticFiles(directory="static"),
-    name="static"
-)
-
 @app.get("/api/fluorophores")
 def get_fluorophores(db: Session = Depends(get_db)):
     fluorophores = db.query(models.Fluorophore).all()
