@@ -11,6 +11,8 @@ from . import models, schemas
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 
+print("BASE DIR:", BASE_DIR)
+print("STATIC EXISTS:", (BASE_DIR / "static").exists())
 BASE_DIR = Path(__file__).resolve().parent
 
 templates = Jinja2Templates(directory=BASE_DIR / "templates")
