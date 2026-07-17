@@ -46,8 +46,8 @@ class LotCreate(BaseModel):
     creation_date: date
     expiration_date: date
     product_state: str
-    test_5uL_concentration_ug_mL: Decimal
-    initial_volume_mL: Decimal
+    test_5uL_concentration_ug_ml: Decimal
+    initial_volume_ml: Decimal
     remarks: str | None = None
 
 class LotRead(BaseModel):
@@ -58,8 +58,8 @@ class LotRead(BaseModel):
     creation_date: date
     expiration_date: date
     product_state: str
-    test_5uL_concentration_ug_mL: Decimal
-    initial_volume_mL: Decimal
+    test_5uL_concentration_ug_ml: Decimal
+    initial_volume_ml: Decimal
     remarks: str | None
 
     model_config = ConfigDict(from_attributes=True)
@@ -71,8 +71,8 @@ class LotUpdate(BaseModel):
     creation_date: date | None = None
     expiration_date: date | None = None
     product_state: str | None = None
-    test_5uL_concentration_ug_mL: Decimal | None = None
-    initial_volume_mL: Decimal | None = None
+    test_5uL_concentration_ug_ml: Decimal | None = None
+    initial_volume_ml: Decimal | None = None
     remarks: str | None = None
 
 # classes for bulk table create, read, update
