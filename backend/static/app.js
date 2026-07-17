@@ -77,8 +77,8 @@ async function loadLots() {
                     <td>${lot.creation_date}</td>
                     <td>${lot.expiration_date}</td>
                     <td>${lot.product_state}</td>
-                    <td>${lot.test_5uL_concentration_ug_mL}</td>
-                    <td>${lot.initial_volume_mL}</td>
+                    <td>${lot.test_5uL_concentration_ug_ml}</td>
+                    <td>${lot.initial_volume_ml}</td>
                     <td>${lot.remarks}</td>
                         <td>
                     <button onclick="updateLot(${lot.lot_id})">
@@ -124,8 +124,8 @@ async function loadBulkInventory() {
           <td>${bulk_product.lot_number}</td>
           <td>${bulk_product.creation_date}</td>
           <td>${bulk_product.expiration_date}</td>
-          <td>${bulk_product.initial_volume_mL}</td>
-          <td>${bulk_product.current_volume_mL}</td>
+          <td>${bulk_product.initial_volume_mk}</td>
+          <td>${bulk_product.current_volume_ml}</td>
           <td>${bulk_product.storage_concentration_ug_mL}</td>
           <td>${bulk_product.location}</td>
           <td>${bulk_product.buffer}</td>
@@ -253,10 +253,10 @@ if (lotForm) {
       creation_date: document.getElementById("creation_date").value,
       expiration_date: document.getElementById("expiration_date").value,
       product_state: document.getElementById("product_state").value,
-      test_5uL_concentration_ug_mL: document.getElementById(
-        "test_5uL_concentration_ug_mL",
+      test_5uL_concentration_ug_ml: document.getElementById(
+        "test_5uL_concentration_ug_ml",
       ).value,
-      initial_volume_mL: document.getElementById("initial_volume_mL").value,
+      initial_volume_mL: document.getElementById("initial_volume_ml").value,
       remarks: document.getElementById("remarks").value,
     };
 
@@ -491,22 +491,26 @@ async function deleteProduct(product_id) {
   }
 }
 
-document.getElementById("product_id").addEventListener("change", async (e) => {
-  let productId = e.target.value;
+const productDropdown = document.getElementById("product_id");
 
-  let res = await fetch(`/api/lots?product_id=${productId}`);
-  let lots = await res.json();
+if (productDropdown) {
+  productDropdown.addEventListener("change", async (e) => {
+    let productId = e.target.value;
 
-  let lotSelect = document.getElementById("lot_id");
-  lotSelect.innerHTML = "";
+    let res = await fetch(`/api/lots?product_id=${productId}`);
+    let lots = await res.json();
 
-  lots.forEach((lot) => {
-    let opt = document.createElement("option");
-    opt.value = lot.lot_id;
-    opt.textContent = `Lot ${lot.lot_number}`;
-    lotSelect.appendChild(opt);
+    let lotSelect = document.getElementById("lot_id");
+    lotSelect.innerHTML = "";
+
+    lots.forEach((lot) => {
+      let opt = document.createElement("option");
+      opt.value = lot.lot_id;
+      opt.textContent = `Lot ${lot.lot_number}`;
+      lotSelect.appendChild(opt);
+    });
   });
-});
+}
 
 window.updateProduct = async function (product_id) {
   console.log("editing:", product_id);
@@ -541,10 +545,10 @@ window.updateLot = async function (lot_id) {
   document.getElementById("creation_date").value = lot.creation_date || "";
   document.getElementById("expiration_date").value = lot.expiration_date || "";
   document.getElementById("product_state").value = lot.product_state || "";
-  document.getElementById("test_5uL_concentration_ug_mL").value =
-    lot.test_5uL_concentration_ug_mL || "";
-  document.getElementById("initial_volume_mL").value =
-    lot.initial_volume_mL || "";
+  document.getElementById("test_5uL_concentration_ug_ml").value =
+    lot.test_5uL_concentration_ug_ml || "";
+  document.getElementById("initial_volume_ml").value =
+    lot.initial_volume_ml || "";
   document.getElementById("remarks").value = lot.remarks || "";
 
   // switch to edit mode

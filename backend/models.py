@@ -57,7 +57,7 @@ class Lot(Base):
     creation_date = Column(Date)
     expiration_date = Column(Date)
     product_state = Column(String)
-    test_5uL_concentration_ug_mL = Column(Float)
+    test_5uL_concentration_ug_ml = Column(Float)
     initial_volume_mL = Column(Float)
     remarks = Column(String)
     product = relationship(
