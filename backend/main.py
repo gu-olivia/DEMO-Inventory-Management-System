@@ -350,7 +350,7 @@ def get_bulk_inventory(db: Session = Depends(get_db)):
             "lot_number": bp.lot_number if bp.lot_number else None,
             "creation_date": bp.lot.creation_date if bp.lot else None,
             "expiration_date": bp.lot.expiration_date if bp.lot else None,
-            "initial_volume_mL": bp.lot.initial_volume_mL if bp.lot else None,
+            "initial_volume_ml": bp.lot.initial_volume_ml if bp.lot else None,
             "current_volume_ml": bp.current_volume_ml,
             "storage_concentration_ug_ml": bp.storage_concentration_ug_ml if bp.lot else None,
             "location": bp.location,
