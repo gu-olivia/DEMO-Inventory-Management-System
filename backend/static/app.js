@@ -170,7 +170,7 @@ async function loadPackagedInventory() {
           <td>${packaged_product.size}</td>
           <td>${packaged_product.lot_number}</td>
           <td>${packaged_product.packaging_date}</td>
-          <td>${packaged_product.packaging_concentration_ug_mL}</td>
+          <td>${packaged_product.packaging_concentration_ug_ml}</td>
           <td>${packaged_product.location}</td>
           <td>${packaged_product.qty_remaining}</td>
           <td>${packaged_product.buffer}</td>
@@ -353,8 +353,8 @@ if (packagedForm) {
       lot_number: document.getElementById("lot_number").value,
       size: document.getElementById("size").value,
       packaging_date: document.getElementById("packaging_date").value,
-      packaging_concentration_ug_mL: Number(
-        document.getElementById("packaging_concentration_ug_mL").value,
+      packaging_concentration_ug_ml: Number(
+        document.getElementById("packaging_concentration_ug_ml").value,
       ),
       location: document.getElementById("location").value,
       qty_remaining: document.getElementById("qty_remaining").value,
@@ -595,8 +595,8 @@ window.updatePackagedProduct = async function (packaged_id) {
     packaged_product.unit_price || "";
   document.getElementById("packaging_date").value =
     packaged_product.packaging_date || "";
-  document.getElementById("packaging_concentration_ug_mL").value =
-    packaged_product.packaging_concentration_ug_mL || "";
+  document.getElementById("packaging_concentration_ug_ml").value =
+    packaged_product.packaging_concentration_ug_ml || "";
   document.getElementById("qty_remaining").value =
     packaged_product.qty_remaining || "";
   document.getElementById("product_catalog_number").value =

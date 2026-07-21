@@ -120,7 +120,7 @@ class Packaged_Product(Base):
     clone_name = Column(String)
     unit_price = Column(Float)
     packaging_date = Column(Date)
-    packaging_concentration_ug_mL = Column(Float)
+    packaging_concentration_ug_ml = Column(Float)
     qty_remaining = Column(Integer)
     product_catalog_number = Column(String)
     size = Column(String)
