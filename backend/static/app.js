@@ -77,7 +77,7 @@ async function loadLots() {
                     <td>${lot.creation_date}</td>
                     <td>${lot.expiration_date}</td>
                     <td>${lot.product_state}</td>
-                    <td>${lot.test_5uL_concentration_ug_ml}</td>
+                    <td>${lot.test_5ul_concentration_ug_ml}</td>
                     <td>${lot.initial_volume_ml}</td>
                     <td>${lot.remarks}</td>
                         <td>
@@ -124,7 +124,7 @@ async function loadBulkInventory() {
           <td>${bulk_product.lot_number}</td>
           <td>${bulk_product.creation_date}</td>
           <td>${bulk_product.expiration_date}</td>
-          <td>${bulk_product.initial_volume_mk}</td>
+          <td>${bulk_product.initial_volume_ml}</td>
           <td>${bulk_product.current_volume_ml}</td>
           <td>${bulk_product.storage_concentration_ug_mL}</td>
           <td>${bulk_product.location}</td>
@@ -253,7 +253,7 @@ if (lotForm) {
       creation_date: document.getElementById("creation_date").value,
       expiration_date: document.getElementById("expiration_date").value,
       product_state: document.getElementById("product_state").value,
-      test_5uL_concentration_ug_ml: document.getElementById(
+      test_5ul_concentration_ug_ml: document.getElementById(
         "test_5uL_concentration_ug_ml",
       ).value,
       initial_volume_mL: document.getElementById("initial_volume_ml").value,
@@ -545,8 +545,8 @@ window.updateLot = async function (lot_id) {
   document.getElementById("creation_date").value = lot.creation_date || "";
   document.getElementById("expiration_date").value = lot.expiration_date || "";
   document.getElementById("product_state").value = lot.product_state || "";
-  document.getElementById("test_5uL_concentration_ug_ml").value =
-    lot.test_5uL_concentration_ug_ml || "";
+  document.getElementById("test_5ul_concentration_ug_ml").value =
+    lot.test_5ul_concentration_ug_ml || "";
   document.getElementById("initial_volume_ml").value =
     lot.initial_volume_ml || "";
   document.getElementById("remarks").value = lot.remarks || "";
