@@ -126,7 +126,7 @@ async function loadBulkInventory() {
           <td>${bulk_product.expiration_date}</td>
           <td>${bulk_product.initial_volume_ml}</td>
           <td>${bulk_product.current_volume_ml}</td>
-          <td>${bulk_product.storage_concentration_ug_mL}</td>
+          <td>${bulk_product.storage_concentration_ug_ml}</td>
           <td>${bulk_product.location}</td>
           <td>${bulk_product.buffer}</td>
           <td>${bulk_product.remarks}</td>
@@ -299,11 +299,11 @@ if (bulkForm) {
       lot_id: Number(document.getElementById("lot_id").value),
       product_id: Number(document.getElementById("product_id").value),
       lot_number: document.getElementById("lot_number").value,
-      storage_concentration_ug_mL: Number(
-        document.getElementById("storage_concentration_ug_mL").value,
+      storage_concentration_ug_ml: Number(
+        document.getElementById("storage_concentration_ug_ml").value,
       ),
       current_volume_mL: Number(
-        document.getElementById("current_volume_mL").value,
+        document.getElementById("current_volume_ml").value,
       ),
       location: document.getElementById("location").value,
       buffer: document.getElementById("buffer").value,
@@ -566,10 +566,10 @@ window.updateBulkProduct = async function (lot_id) {
   // fill form fields
   document.getElementById("product_id").value = bulk_product.product_id || "";
   document.getElementById("lot_number").value = bulk_product.lot_number || "";
-  document.getElementById("storage_concentration_ug_mL").value =
-    bulk_product.storage_concentration_ug_mL || "";
-  document.getElementById("current_volume_mL").value =
-    bulk_product.current_volume_mL || "";
+  document.getElementById("storage_concentration_ug_ml").value =
+    bulk_product.storage_concentration_ug_ml || "";
+  document.getElementById("current_volume_ml").value =
+    bulk_product.current_volume_ml || "";
   document.getElementById("location").value = bulk_product.location || "";
   document.getElementById("buffer").value = bulk_product.buffer || "";
   document.getElementById("remarks").value = bulk_product.remarks || "";
