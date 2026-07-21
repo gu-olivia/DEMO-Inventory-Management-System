@@ -351,8 +351,8 @@ def get_bulk_inventory(db: Session = Depends(get_db)):
             "creation_date": bp.lot.creation_date if bp.lot else None,
             "expiration_date": bp.lot.expiration_date if bp.lot else None,
             "initial_volume_mL": bp.lot.initial_volume_mL if bp.lot else None,
-            "current_volume_mL": bp.current_volume_mL,
-            "storage_concentration_ug_mL": bp.storage_concentration_ug_mL if bp.lot else None,
+            "current_volume_ml": bp.current_volume_ml,
+            "storage_concentration_ug_ml": bp.storage_concentration_ug_ml if bp.lot else None,
             "location": bp.location,
             "buffer": bp.buffer,
             "remarks": bp.remarks,
@@ -384,8 +384,8 @@ def create_bulk(bulk: schemas.BulkCreate, db: Session = Depends(get_db)):
         clone_name=bulk.clone_name,
         lot_number=bulk.lot_number,
         buffer=bulk.buffer,
-        storage_concentration_ug_mL=bulk.storage_concentration_ug_mL,
-        current_volume_mL=bulk.current_volume_mL,
+        storage_concentration_ug_ml=bulk.storage_concentration_ug_ml,
+        current_volume_ml=bulk.current_volume_ml,
         location=bulk.location,
         remarks=bulk.remarks
     )

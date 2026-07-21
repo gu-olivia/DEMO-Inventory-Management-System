@@ -82,8 +82,8 @@ class BulkCreate(BaseModel):
     clone_name: str | None = None
     lot_number: str
     buffer: str | None = None
-    storage_concentration_ug_mL: Decimal
-    current_volume_mL: Decimal
+    storage_concentration_ug_ml: Decimal
+    current_volume_ml: Decimal
     location: str | None = None
     remarks: str | None = None
 
@@ -94,8 +94,8 @@ class BulkRead(BaseModel):
     clone_name: str | None
     lot_number: str
     buffer: str | None
-    storage_concentration_ug_mL: Decimal
-    current_volume_mL: Decimal
+    storage_concentration_ug_ml: Decimal
+    current_volume_ml: Decimal
     amount_remaining_ug: Decimal
     location: str | None
     remarks: str | None
@@ -108,8 +108,8 @@ class BulkUpdate(BaseModel):
     #clone_name: str | None = None
     lot_number: str | None = None
     buffer: str | None = None
-    storage_concentration_ug_mL: Decimal | None = None
-    current_volume_mL: Decimal | None = None
+    storage_concentration_ug_ml: Decimal | None = None
+    current_volume_ml: Decimal | None = None
     location: str | None = None
     remarks: str | None = None
     

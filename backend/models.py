@@ -96,11 +96,11 @@ class Bulk_Product(Base):
     product_id = Column(Integer, ForeignKey("products.product_id"))
     clone_name = Column(String)
     lot_number = Column(String)
-    storage_concentration_ug_mL = Column(Float)
-    current_volume_mL = Column(Float)
+    storage_concentration_ug_ml = Column(Float)
+    current_volume_ml = Column(Float)
     @property
     def amount_remaining_ug(self):
-        return self.storage_concentration_ug_mL * self.current_volume_mL
+        return self.storage_concentration_ug_ml * self.current_volume_ml
     location = Column(String)
     buffer = Column(String)
     remarks = Column(String)
