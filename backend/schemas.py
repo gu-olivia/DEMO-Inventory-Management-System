@@ -46,7 +46,7 @@ class LotCreate(BaseModel):
     creation_date: date
     expiration_date: date
     product_state: str
-    test_5uL_concentration_ug_ml: Decimal
+    test_5ul_concentration_ug_ml: Decimal
     initial_volume_ml: Decimal
     remarks: str | None = None
 
@@ -58,7 +58,7 @@ class LotRead(BaseModel):
     creation_date: date
     expiration_date: date
     product_state: str
-    test_5uL_concentration_ug_ml: Decimal
+    test_5ul_concentration_ug_ml: Decimal
     initial_volume_ml: Decimal
     remarks: str | None
 
@@ -71,7 +71,7 @@ class LotUpdate(BaseModel):
     creation_date: date | None = None
     expiration_date: date | None = None
     product_state: str | None = None
-    test_5uL_concentration_ug_ml: Decimal | None = None
+    test_5ul_concentration_ug_ml: Decimal | None = None
     initial_volume_ml: Decimal | None = None
     remarks: str | None = None
 
@@ -120,7 +120,7 @@ class PackagedCreate(BaseModel):
     #clone_name: str | None = None
     unit_price: float | None = None
     packaging_date: date | None = None
-    packaging_concentration_ug_mL: float | None = None
+    packaging_concentration_ug_ml: float | None = None
     qty_remaining: int | None = None
     product_catalog_number: str | None = None
     size: str | None = None
@@ -136,7 +136,7 @@ class PackagedRead(BaseModel):
     clone_name: str | None
     unit_price: Decimal | None
     packaging_date: date | None
-    packaging_concentration_ug_mL: Decimal | None
+    packaging_concentration_ug_ml: Decimal | None
     qty_remaining: int
     product_catalog_number: str | None
     size: str | None
@@ -153,7 +153,7 @@ class PackagedUpdate(BaseModel):
     clone_name: str | None = None
     unit_price: Decimal | None = None
     packaging_date: date | None = None
-    packaging_concentration_ug_mL: Decimal | None = None
+    packaging_concentration_ug_ml: Decimal | None = None
     qty_remaining: int | None = None
     product_catalog_number: str | None = None
     size: str | None = None
