@@ -254,9 +254,9 @@ if (lotForm) {
       expiration_date: document.getElementById("expiration_date").value,
       product_state: document.getElementById("product_state").value,
       test_5ul_concentration_ug_ml: document.getElementById(
-        "test_5uL_concentration_ug_ml",
+        "test_5ul_concentration_ug_ml",
       ).value,
-      initial_volume_mL: document.getElementById("initial_volume_ml").value,
+      initial_volume_ml: document.getElementById("initial_volume_ml").value,
       remarks: document.getElementById("remarks").value,
     };
 
