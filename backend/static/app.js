@@ -302,7 +302,7 @@ if (bulkForm) {
       storage_concentration_ug_ml: Number(
         document.getElementById("storage_concentration_ug_ml").value,
       ),
-      current_volume_mL: Number(
+      current_volume_ml: Number(
         document.getElementById("current_volume_ml").value,
       ),
       location: document.getElementById("location").value,
