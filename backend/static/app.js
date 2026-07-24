@@ -260,6 +260,8 @@ if (lotForm) {
       remarks: document.getElementById("remarks").value,
     };
 
+    console.log(lot);
+
     let url = "/api/lots";
     let method = "POST";
 
