@@ -631,25 +631,43 @@ async function deleteLot(lot_id) {
 }
 
 async function deleteBulkProduct(lot_id) {
-  if (!confirm("Delete this bulk?")) return;
+  if (!confirm("Delete this bulk product?")) return;
+
   console.log("Deleting:", lot_id);
 
-  let response = await fetch(`/api/bulk_inventory/${lot_id}`, {
+  const response = await fetch(`/api/bulk_inventory/${lot_id}`, {
     method: "DELETE",
   });
 
+  if (!response.ok) {
+    console.error(await response.text());
+    return;
+  }
+
   console.log(await response.json());
+
+  // Refresh the table
+  await loadBulkInventory();
 }
 
 async function deletePackagedProduct(packaged_id) {
   if (!confirm("Delete this packaged product?")) return;
+
   console.log("Deleting:", packaged_id);
 
-  let response = await fetch(`/api/packaged_inventory/${packaged_id}`, {
+  const response = await fetch(`/api/packaged_inventory/${packaged_id}`, {
     method: "DELETE",
   });
 
+  if (!response.ok) {
+    console.error(await response.text());
+    return;
+  }
+
   console.log(await response.json());
+
+  // Refresh the table
+  await loadPackagedInventory();
 }
 
 window.cancelEdit = function (type) {
