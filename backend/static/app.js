@@ -260,8 +260,6 @@ if (lotForm) {
       remarks: document.getElementById("remarks").value,
     };
 
-    console.log(lot);
-
     let url = "/api/lots";
     let method = "POST";
 
@@ -270,7 +268,7 @@ if (lotForm) {
       url = `/api/lots/${window.editingLotId}`;
       method = "PUT";
     }
-
+    console.log(lot);
     let response = await fetch(url, {
       method: method,
       headers: {
