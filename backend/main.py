@@ -250,8 +250,8 @@ def create_lot(lot: schemas.LotCreate, db: Session = Depends(get_db)):
         creation_date=lot.creation_date,
         expiration_date=lot.expiration_date,
         product_state=lot.product_state,
-        test_5uL_concentration_ug_mL=lot.test_5uL_concentration_ug_mL,
-        initial_volume_mL=lot.initial_volume_mL,
+        test_5ul_concentration_ug_ml=lot.test_5ul_concentration_ug_ml,
+        initial_volume_ml=lot.initial_volume_ml,
         remarks=lot.remarks
     )
 
